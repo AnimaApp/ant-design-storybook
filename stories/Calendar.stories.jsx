@@ -1,10 +1,17 @@
-import { Calendar } from 'antd'
+import { Calendar } from 'antd';
 
 export default {
     title: "Calendar",
     component: Calendar,
+    parameters: {
+        docs: {
+            description: {
+                component: "Calendar",
+            },
+        },
+    },
     argTypes: {
-        fullscreen: { type: "boolean"},
+        fullscreen: { description: "Fullscreen", type: "boolean" },
     },
     decorators: [
         (Story) => (

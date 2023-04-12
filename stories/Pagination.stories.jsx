@@ -3,20 +3,28 @@ import { Pagination } from 'antd';
 export default {
   title: "Pagination",
   component: Pagination,
+  parameters: {
+    docs: {
+      description: {
+        component: "Pagination",
+      },
+    },
+  },
   argTypes: {
-    total: { type: "number" },
-    defaultCurrent: { type: "number" },
+    total: { description: "Total", type: "number" },
+    defaultCurrent: { description: "Default Current", type: "number" },
     size: {
+      description: "Size",
       control: {
         type: "select",
         options: ["small", "default"]
       },
     },
-    showSizeChanger: { type: "boolean" },
-    showQuickJumper: { type: "boolean" },
-    disabled: { type: "boolean" },
-    simple: { type: "boolean" },
-    showTotal: { type: "boolean" },
+    showSizeChanger: { description: "Show Size Changer", type: "boolean" },
+    showQuickJumper: { description: "Show Quick Jumper", type: "boolean" },
+    disabled: { description: "Disabled", type: "boolean" },
+    simple: { description: "Simple", type: "boolean" },
+    showTotal: { description: "Show Total", type: "boolean" },
     // renderItem: { type: "boolean" },
   }
 };

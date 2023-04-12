@@ -3,10 +3,17 @@ import { Checkbox } from 'antd';
 export default {
   title: "Checkbox",
   component: Checkbox,
+  parameters: {
+    docs: {
+      description: {
+        component: "Checkbox",
+      },
+    },
+  },
   argTypes: {
-    text: { type: "string" },
-    checked: { type: "boolean" },
-    disabled: { type: "boolean" },
+    text: { description: "Text", type: "string" },
+    checked: { description: "Checked", type: "boolean" },
+    disabled: { description: "Disabled", type: "boolean" },
   }
 };
 

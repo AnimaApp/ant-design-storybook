@@ -3,23 +3,32 @@ import { Divider } from 'antd';
 export default {
   title: "Divider",
   component: Divider,
+  parameters: {
+    docs: {
+      description: {
+        component: "Divider",
+      },
+    },
+  },
   argTypes: {
     type: {
+      description: "Type",
       control: {
         type: "select",
         options: ["horizontal", "vertical"]
       },
     },
-    dashed: { type: "boolean" },
-    text: { type: "string" },
-    plain: { type: "boolean" },
+    dashed: { description: "Dashed", type: "boolean" },
+    text: { description: "Text", type: "string" },
+    plain: { description: "Plain", type: "boolean" },
     orientation: {
+      description: "Orientation",
       control: {
         type: "select",
         options: ["center", "left", "right"]
       },
     },
-    orientationMargin: { type: "number" },
+    orientationMargin: { description: "Orientation Margin", type: "number" },
   }
 };
 

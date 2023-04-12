@@ -1,7 +1,6 @@
-import { Dropdown, Space } from 'antd';
+import { Dropdown } from 'antd';
 import withIconMapped from "../decorators/withIconMapped";
 import {iconOptions, iconTransform} from "../utils";
-// import {dropItems} from "./Dropdown.stories";
 
 export default {
   title: "DropdownButton",

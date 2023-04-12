@@ -4,27 +4,37 @@ const { SHOW_CHILD } = Cascader;
 export default {
   title: "Cascader",
   component: Cascader,
+  parameters: {
+    docs: {
+      description: {
+        component: "Cascader",
+      },
+    },
+  },
   argTypes: {
-    placeholder: { type: "string" },
-    width: { type: "number" },
-    multiple: { type: "boolean" },
-    disabled: { type: "boolean" },
-    search: { type: "boolean" },
-    hover: { type: "boolean" },
-    showChecked: { type: "boolean" },
+    placeholder: { description: "Placeholder", type: "string" },
+    width: { description: "Width", type: "number" },
+    multiple: { description: "Multiple", type: "boolean" },
+    disabled: { description: "Disabled", type: "boolean" },
+    search: { description: "Search", type: "boolean" },
+    hover: { description: "Hover", type: "boolean" },
+    showChecked: { description: "Show Checked", type: "boolean" },
     size: {
+      description: "Size",
       control: {
         type: "select",
         options: ["large", "middle", "small"]
       },
     },
     placement: {
+      description: "Placement",
       control: {
         type: "select",
         options: ["bottomLeft", "bottomRight", "topLeft", "topRight"]
       },
     },
     status: {
+      description: "Status",
       control: {
         type: "select",
         options: ["default", "warning", "error"]

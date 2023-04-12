@@ -15,4 +15,14 @@ export default {
   argTypes: {
 
   }
-}
+};
+
+export const Default = (args) => {
+  return (
+    <Tag />
+  );
+};
+
+Default.args = {
+
+};

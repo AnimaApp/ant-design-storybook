@@ -1,44 +1,54 @@
-import { Button, Space } from 'antd';
+import { Button } from 'antd';
 import withIconMapped from "../decorators/withIconMapped";
 import {iconOptions, iconTransform} from "../utils";
 
 export default {
   title: "Button",
   component: Button,
+  parameters: {
+    docs: {
+      description: {
+        component: "Button",
+      },
+    },
+  },
   argTypes: {
-    text: { type: "string" },
+    text: { description: "Text", type: "string" },
     type: {
+      description: "Type",
       control: {
         type: "select",
         options: ["default", "primary", "dashed", "text", "link", "ghost"]
       },
     },
     size: {
+      description: "Size",
       control: {
         type: "select",
         options: ["small", "default", "large"]
       },
     },
     shape: {
+      description: "Shape",
       control: {
         type: "select",
         options: ["default", "circle", "round"]
       },
     },
     iconName: {
+      description: "Icon",
       control: {
         type: "select",
         options: iconOptions,
-        description: "Icon",
         transform: iconTransform,
         required: false,
       },
     },
-    loading: { type: "boolean" },
-    ghost: { type: "boolean" },
-    block: { type: "boolean" },
-    disabled: { type: "boolean" },
-    danger: { type: "boolean" },
+    loading: { description: "Loading",  type: "boolean" },
+    ghost: { description: "Ghost", type: "boolean" },
+    block: { description: "Block", type: "boolean" },
+    disabled: { description: "Disabled", type: "boolean" },
+    danger: { description: "Danger", type: "boolean" },
   },
   decorators: [withIconMapped],
 };

@@ -3,9 +3,17 @@ import { Checkbox } from 'antd';
 export default {
   title: "CheckboxGroup",
   component: Checkbox.Group,
+  parameters: {
+    docs: {
+      description: {
+        component: "CheckboxGroup",
+      },
+    },
+  },
   argTypes: {
-    disabled: { type: "boolean" },
+    disabled: { description: "Disabled", type: "boolean" },
     options: {
+      description: "Options",
       type: "story",
     },
   }

@@ -1,6 +1,6 @@
 import { Radio, Space } from "antd";
-import { Default as RadioStories } from "./Radio.stories";
-const { Group, Button } = Radio;
+const { Group } = Radio;
+
 export default {
   title: "RadioGroup",
   component: Group,
