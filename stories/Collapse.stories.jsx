@@ -56,17 +56,9 @@ export default {
     bordered: { description: "Bordered", type: "boolean"},
     showArrow: { description: "Show Arrow", type: "boolean"},
     ghost: { description: "Ghost", type: "boolean"},
-    item: {
+    items: {
       type: "story",
-      description: "item",
-    },
-    item2: {
-      type: "story",
-      description: "item",
-    },
-    item3: {
-      type: "story",
-      description: "item",
+      description: "items",
     },
   },
   decorators: [withIconMapped],
@@ -87,6 +79,24 @@ const genExtra = (IconName) => (
   />
 );
 
+const data = [
+  {
+    header: "This is panel header 1",
+    text: text,
+    key: "1"
+  },
+  {
+  header: "This is panel header 2",
+    text: text,
+    key: "2"
+  },
+  {
+  header: "This is panel header 3",
+    text: text,
+    key: "3"
+  },
+]
+
 export const Default = (args) => {
   return (
     <Collapse
@@ -94,15 +104,11 @@ export const Default = (args) => {
       defaultActiveKey={[args.defaultActiveKey]}
       style={{ width: args.width }}
     >
-      <Collapse.Panel {...args} header={args.item.header} key="1" extra={args.iconName}>
-        <p>{args.item.text}</p>
-      </Collapse.Panel>
-      <Collapse.Panel {...args} header={args.item2.header} key="2" extra={args.iconName}>
-        <p>{args.item2.text}</p>
-      </Collapse.Panel>
-      <Collapse.Panel {...args} header={args.item3.header} key="3" extra={args.iconName}>
-        <p>{args.item3.text}</p>
-      </Collapse.Panel>
+      {args.items.map((item) => (
+        <Collapse.Panel {...args} header={item.header} key={item.key} extra={args.iconName}>
+          <p>{item.text}</p>
+        </Collapse.Panel>
+      ))}
     </Collapse>
   );
 };
@@ -118,16 +124,5 @@ Default.args = {
   ghost: false,
   defaultActiveKey: "1",
   iconName: "None",
-  item: {
-    header: "This is panel header 1",
-    text: text,
-  },
-  item2: {
-    header: "This is panel header 2",
-    text: text,
-  },
-  item3: {
-    header: "This is panel header 3",
-    text: text,
-  },
+  items: data,
 };
