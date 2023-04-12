@@ -1,15 +1,25 @@
 import { Anchor, Row, Col } from 'antd';
 
 export default {
+  title: "Anchor",
+  component: Anchor,
+  parameters: {
+    docs: {
+      description: {
+        component: "Anchor",
+      },
+    },
+  },
   argTypes: {
     direction: {
+      description: "Direction",
       control: {
         type: "select",
         options: ["vertical", "horizontal"]
       },
     },
-    affix: { type: "boolean" },
-    showInkInFixed: { type: "boolean" },
+    affix: { description: "Affix", type: "boolean" },
+    showInkInFixed: { description: "ShowInk In Fixed", type: "boolean" },
     items: { description: "Data", type: "story" },
   }
 };

@@ -1,32 +1,43 @@
-import { ClockCircleOutlined } from '@ant-design/icons';
-import { Avatar, Badge, Space } from 'antd';
+import { Avatar, Badge } from 'antd';
 
 export default {
   title: "Badge",
   component: Badge,
+  parameters: {
+    docs: {
+      description: {
+        component: "Badge",
+      },
+    },
+  },
   argTypes: {
-    count: { type: "number" },
-    overflowCount: { type: "number" },
-    color: { control: {type: "color"}},
+    count: { description: "Count",  type: "number" },
+    overflowCount: { description: "Overflow Count",  type: "number" },
+    color: {
+      description: "Color",
+      control: { type: "color" }},
     status: {
+      description: "Status",
       control: {
         type: "select",
         options: ["default", "success", "processing", "error", "warning"]
       },
     },
     size: {
+      description: "Size",
       control: {
         type: "select",
         options: ["small", "default"]
       },
     },
-    dot: { type: "boolean" },
+    dot: { description: "Dto",  type: "boolean" },
     offset: {
+      description: "Offset",
       control: {
         type: "story",
       }
     },
-    text: { type: "string" },
+    text: { description: "Text", type: "string" },
   }
 };
 

@@ -1,9 +1,16 @@
 import { AutoComplete, Input } from 'antd';
-import React, { useState } from 'react';
+import React from 'react';
 
 export default {
   title: "AutoComplete",
   component: AutoComplete,
+  parameters: {
+    docs: {
+      description: {
+        component: "AutoComplete",
+      },
+    },
+  },
   argTypes: {
     placeholder: { type: "string" },
     width: { type: "number" },

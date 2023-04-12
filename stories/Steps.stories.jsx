@@ -4,32 +4,43 @@ import {useMemo, useState} from "react";
 export default {
   title: "Steps",
   component: Steps,
+  parameters: {
+    docs: {
+      description: {
+        component: "Steps",
+      },
+    },
+  },
   argTypes: {
     size: {
+      description: "Size",
       control: {
         type: "select",
         options: ["small", "default"]
       },
     },
     status: {
+      description: "Status",
       control: {
         type: "select",
         options: ["wait", "process", "finish", "error"]
       },
     },
     direction: {
+      description: "Direction",
       control: {
         type: "select",
         options: ["vertical", "horizontal"]
       },
     },
     type: {
+      description: "Type",
       control: {
         type: "select",
         options: ["default", "navigation", "inline"]
       },
     },
-    progressDot: { type: "boolean" },
+    progressDot: { description: "Progress Dot", type: "boolean" },
   }
 };
 

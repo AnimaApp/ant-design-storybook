@@ -1,27 +1,36 @@
-import { UserOutlined } from '@ant-design/icons';
-import { Avatar, Space } from 'antd';
+import { Avatar } from 'antd';
 import {iconOptions, iconTransform} from "../utils";
 import withIconMapped from "../decorators/withIconMapped";
 
 export default {
   title: "Avatar",
   component: Avatar,
+  parameters: {
+    docs: {
+      description: {
+        component: "Avatar",
+      },
+    },
+  },
   argTypes: {
-    size: { type: "number" },
-    src: { type: "string" },
-    text: { type: "string" },
-    backgroundColor: { control: {type: "color"}},
+    size: { description: "Size", type: "number" },
+    src: { description: "Src", type: "string" },
+    text: { description: "Text", type: "string" },
+    backgroundColor: {
+      description: "Color",
+      control: { type: "color" }},
     shape: {
+      description: "Shape",
       control: {
         type: "select",
         options: ["circle", "square"]
       },
     },
     iconName: {
+      description: "Icon",
       control: {
         type: "select",
         options: iconOptions,
-        description: "Icon",
         transform: iconTransform,
         required: false,
       },
