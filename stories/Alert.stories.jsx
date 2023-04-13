@@ -46,8 +46,8 @@ Default.args = {
   message: "Success Text",
   description: "Description Text",
   closeText: "Close Now",
+  actionText: "UNDO",
   closable: true,
   showIcon: true,
   banner: false,
-  actionText: "UNDO",
 };
